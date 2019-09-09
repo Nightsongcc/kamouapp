@@ -53,6 +53,8 @@
 						"url": "https://www.kamou.cn/" //tab1页面地址  
 					}, {
 						"url": "https://www.kamou.cn/user/" //tab2页面地址  
+					}, {
+						"url": "http://baidu.com/" //tab3页面地址  
 					}]
 				},
 
@@ -69,6 +71,15 @@
 
 			"matchUrls": [{
 				"pathname": "WILDCARD:/user/*"
+			}],
+			"webviewParameter": {
+				"titleNView": false
+			}
+
+		},{
+			"webviewId": "bye", //详情页  
+			"matchUrls": [{
+				"href": "http://baidu.com/"
 			}],
 			"webviewParameter": {
 				"titleNView": false
