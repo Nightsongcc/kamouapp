@@ -1,0 +1,79 @@
+{
+	"global": {
+		"webviewParameter": {
+
+			"titleNView": {
+				"titleText": "卡眸网络",
+
+				"backgroundColor": "#00c3ef", //导航栏背景色
+				"titleColor": "#FFFFFF", //标题颜色
+				"titleSize": "17px"
+			},
+			"statusbar": {
+				//系统状态栏样式(前景色)
+				"style": "dark"
+			},
+			"appendCss": "",
+			"appendJs": ""
+		},
+		"easyConfig": {
+			"quit": {
+				"toast": {
+					"showFeedback": false //不显示“反馈意见”链接，默认为true  
+				},
+				"open": {
+					"waiting": {
+						"title": "加载中...",
+						"options": {
+							"background": "#EF5FA7", //粉色背景  
+							"color": "#ffffff" //白色文字  
+						}
+					}
+				}
+			}
+		}
+	},
+	"pages": [{
+			"webviewId": "__W2A__www.kamou.cn", //首页
+			"matchUrls": [{
+					"href": "https://www.kamou.cn"
+				},
+				{
+					"href": "https://www.kamou.cn/"
+				}
+			],
+			"webviewParameter": {
+				"titleNView": {
+					"titleText": "卡眸网络" //导航条文本  
+				},
+				"tabBar": { //选项卡配置，仅首页支持
+					"height": "50px", //选项卡高度，默认为50px  
+
+					"list": [{
+						"url": "https://www.kamou.cn/" //tab1页面地址  
+					}, {
+						"url": "https://www.kamou.cn/user/" //tab2页面地址  
+					}]
+				},
+
+				"statusbar": {
+					//状态条背景色，
+					//首页不使用原生导航条，颜色值建议和global->webviewParameter->titleNView->backgroundColor颜色值保持一致
+					//若首页启用了原生导航条，则建议将首页的statusbar配置为false，这样状态条可以和原生导航条背景色保持一致；
+					"background": "#00c3ef"
+				}
+			}
+		},
+		{
+			"webviewId": "user", //详情页  
+
+			"matchUrls": [{
+				"pathname": "WILDCARD:/user/*"
+			}],
+			"webviewParameter": {
+				"titleNView": false
+			}
+
+		}
+	]
+}

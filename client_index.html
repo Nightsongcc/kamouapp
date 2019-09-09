@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<!--使用本地选项卡时，将如下两行代码注释取消-->
+		<link rel="stylesheet" type="text/css" href="__wap2apptabbar.css" />
+		<style type="text/css">  
+		    /*自定义选项卡文字颜色示例*/  
+			.tab-inner {  
+			  background-color: #00c3ef;  
+			  
+			}  
+		    .tab-item {  
+		        color: white;//选项卡文字默认为黑色  
+		    }  
+		    .tab-item.active {  
+		        color: green;//选项卡文字高亮时为蓝色  
+		    }  
+		</style>  
+		<script src="__wap2apptabbar.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<script>  
+		    new TabBar({  
+		        list: [{  
+					iconPath: 'home.png', 
+					selectedIconPath: 'home.png', 
+		            url: "https://www.kamou.cn/",  
+		            text: "商城首页",  
+	
+		        }, {  
+					iconPath: 'daili.png', 
+					selectedIconPath: 'daili.png', 
+		            url: "https://www.kamou.cn/user/",  
+		            text: "代理面板",  
+		        }]  
+		    });  
+		</script>  
+	</body>
+
+</html>
